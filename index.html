@@ -3,72 +3,289 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Classgo AI Platform P0 Preview 測試入口</title>
-  <meta name="description" content="Classgo AI Platform P0 Preview 測試入口、測試範圍、安全提醒與 GitHub Issue Form 回饋提交。">
+  <title>Classgo AI Platform P0 Preview 人工驗測清單</title>
+  <meta name="description" content="Classgo AI Platform P0 Preview 人工驗測清單、測試資料安全規則與 GitHub Issue Form 回饋提交入口。">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <main class="shell">
     <section class="hero" aria-labelledby="page-title">
-      <div class="eyebrow">P0 Preview</div>
-      <h1 id="page-title">Classgo AI Platform P0 Preview 測試入口</h1>
-      <p class="lead">這是 preview，不是 production。請只用來測試 P0 招生漏追 AI 大腦回饋閉環，不要輸入真實學生個資或任何 secret。</p>
+      <div class="eyebrow">P0 Preview Manual QA</div>
+      <h1 id="page-title">Classgo AI Platform P0 Preview 人工驗測清單</h1>
+      <p class="lead">這是 preview，不是 production。請照清單驗證 P0 招生漏追 AI 大腦回饋閉環；發現問題後，把失敗項目、預期結果、實際結果、截圖與嚴重度貼到 GitHub Issue Form。</p>
       <div class="actions" aria-label="主要操作">
         <a class="button primary" href="https://kyc-pc.tail2b14a1.ts.net:10000" rel="noopener noreferrer">開啟 Preview</a>
-        <a class="button secondary" href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" rel="noopener noreferrer">提交回饋</a>
+        <button class="button secondary" type="button" data-copy-summary>複製測試摘要</button>
+        <a class="button secondary" href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" rel="noopener noreferrer">提交 GitHub 回饋</a>
       </div>
       <p class="url-line">Preview URL: <a href="https://kyc-pc.tail2b14a1.ts.net:10000" rel="noopener noreferrer">https://kyc-pc.tail2b14a1.ts.net:10000</a></p>
-      <p class="url-line">回饋表單需要 GitHub login 才能提交。</p>
+      <p class="url-line">正式外部回饋入口：<a href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" rel="noopener noreferrer">Public GitHub Issue Form</a></p>
+      <p class="url-line">本頁只用瀏覽器 localStorage 暫存勾選狀態與備註；不會自動送出、不會上傳資料、沒有後端。</p>
     </section>
 
     <section class="band warning" aria-labelledby="safety-title">
-      <h2 id="safety-title">安全提醒</h2>
-      <p>不要在 preview、GitHub issue、截圖或錄影中貼上真實學生個資、bearer token、cookie、database URL、service env 或 production credentials。</p>
+      <h2 id="safety-title">測試資料安全規則</h2>
+      <p>不要在 preview、GitHub issue、截圖或錄影中輸入或貼上真實學生個資、密碼、token、cookie、database URL、service env、raw secret、production credential 或付款資料。</p>
     </section>
 
-    <section class="grid two">
-      <article class="panel">
-        <h2>測試範圍</h2>
-        <ul>
-          <li>Enrollment workbench。</li>
-          <li>Lead detail。</li>
-          <li>Manual AI draft。</li>
-          <li>Feedback。</li>
-          <li>Review Tray。</li>
-          <li>Audit trace。</li>
-        </ul>
-      </article>
-
-      <article class="panel">
-        <h2>不測範圍</h2>
-        <ul>
-          <li>True LLM quality。</li>
-          <li>Production auth。</li>
-          <li>ERP / MCP / external integration。</li>
-          <li>Auto-send。</li>
-          <li>Auto-publish。</li>
-        </ul>
-      </article>
+    <section class="panel" aria-labelledby="tester-title">
+      <h2 id="tester-title">基本資料</h2>
+      <div class="fields">
+        <label>驗測者<input type="text" data-field="tester" autocomplete="name"></label>
+        <label>角色 / 權限<input type="text" data-field="role" placeholder="Owner / Manager / Staff / Seed customer"></label>
+        <label>瀏覽器 / 裝置<input type="text" data-field="device" placeholder="Chrome / Safari / mobile / desktop"></label>
+        <label>測試日期<input type="date" data-field="date"></label>
+      </div>
     </section>
 
-    <section class="band" aria-labelledby="stub-title">
-      <h2 id="stub-title">Deterministic Stub Caveat</h2>
-      <p>目前 AI draft 是 deterministic stub。這次 preview 只驗證 feedback-loop mechanics，不驗證真實 LLM provider quality，也不代表 production AI answer quality ready。</p>
+    <section class="qa-section" data-section="測試前確認">
+      <h2>1. 測試前確認</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox" data-item="知道這是 P0 preview，不是 production">知道這是 P0 preview，不是 production。</label></li>
+        <li><label><input type="checkbox" data-item="不輸入真實學生個資、密碼、token、付款資料">不輸入真實學生個資、密碼、token、付款資料。</label></li>
+        <li><label><input type="checkbox" data-item="已登入 GitHub，能送出 feedback issue">已登入 GitHub，能送出 feedback issue。</label></li>
+        <li><label><input type="checkbox" data-item="知道目前 AI draft 是 deterministic stub，只驗證流程，不驗證真 LLM 品質">知道目前 AI draft 是 deterministic stub，只驗證 feedback-loop mechanics，不驗證真 LLM provider quality。</label></li>
+      </ul>
+      <textarea data-note="測試前確認" placeholder="實際結果 / 備註"></textarea>
     </section>
 
-    <section class="grid two">
-      <article class="panel">
-        <h2>怎麼提交回饋</h2>
-        <p>請用 GitHub Issue Form 回報每一個問題或觀察。請不要貼 secrets、credentials 或真實學生個資。</p>
-        <a class="text-link" href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" rel="noopener noreferrer">開啟 GitHub 回饋表單</a>
-      </article>
+    <section class="qa-section" data-section="Workbench 測試">
+      <h2>2. Workbench 測試</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox" data-item="開啟 Enrollment Follow-up">開啟 Enrollment Follow-up。</label></li>
+        <li><label><input type="checkbox" data-item="能看到 lead list">能看到 lead list。</label></li>
+        <li><label><input type="checkbox" data-item="能看到 due state">能看到 due state。</label></li>
+        <li><label><input type="checkbox" data-item="能看到 permission state">能看到 permission state。</label></li>
+      </ul>
+      <textarea data-note="Workbench 測試" placeholder="實際結果 / 備註"></textarea>
+    </section>
 
-      <article class="panel">
-        <h2>回饋欄位</h2>
-        <p>請提供測試者、角色、頁面 / URL、操作、預期結果、實際結果、嚴重度，以及必要的截圖或補充說明。</p>
-        <a class="text-link" href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues" rel="noopener noreferrer">查看已提交回饋</a>
-      </article>
+    <section class="qa-section" data-section="Lead detail 測試">
+      <h2>3. Lead detail 測試</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox" data-item="能進入 lead detail">能進入 lead detail。</label></li>
+        <li><label><input type="checkbox" data-item="能看到 lead context">能看到 lead context。</label></li>
+        <li><label><input type="checkbox" data-item="能看到相關 panel">能看到相關 panel。</label></li>
+      </ul>
+      <textarea data-note="Lead detail 測試" placeholder="實際結果 / 備註"></textarea>
+    </section>
+
+    <section class="qa-section" data-section="AI draft 測試">
+      <h2>4. AI draft 測試</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox" data-item="手動產生 draft">手動產生 draft。</label></li>
+        <li><label><input type="checkbox" data-item="確認不會 auto-send">確認不會 auto-send。</label></li>
+        <li><label><input type="checkbox" data-item="確認 no reliable source fallback 不硬編資訊">確認 no reliable source fallback 不硬編資訊。</label></li>
+      </ul>
+      <textarea data-note="AI draft 測試" placeholder="實際結果 / 備註"></textarea>
+    </section>
+
+    <section class="qa-section" data-section="Feedback 測試">
+      <h2>5. Feedback 測試</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox" data-item="對 draft 提交 feedback">對 draft 提交 feedback。</label></li>
+        <li><label><input type="checkbox" data-item="能區分 knowledge missing">能區分 knowledge missing。</label></li>
+        <li><label><input type="checkbox" data-item="能區分 knowledge wrong">能區分 knowledge wrong。</label></li>
+        <li><label><input type="checkbox" data-item="能區分 tone wrong">能區分 tone wrong。</label></li>
+        <li><label><input type="checkbox" data-item="能區分 process judgment wrong">能區分 process judgment wrong。</label></li>
+        <li><label><input type="checkbox" data-item="能區分 should escalate">能區分 should escalate。</label></li>
+      </ul>
+      <textarea data-note="Feedback 測試" placeholder="實際結果 / 備註"></textarea>
+    </section>
+
+    <section class="qa-section" data-section="Review Tray 測試">
+      <h2>6. Review Tray 測試</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox" data-item="Owner 能進 review tray">Owner 能進 review tray。</label></li>
+        <li><label><input type="checkbox" data-item="Manager 能進 review tray">Manager 能進 review tray。</label></li>
+        <li><label><input type="checkbox" data-item="能看 source refs">能看 source refs。</label></li>
+        <li><label><input type="checkbox" data-item="能看 lead refs">能看 lead refs。</label></li>
+        <li><label><input type="checkbox" data-item="能看 draft refs">能看 draft refs。</label></li>
+        <li><label><input type="checkbox" data-item="能看 agent run refs">能看 agent run refs。</label></li>
+        <li><label><input type="checkbox" data-item="能標記 needs more context">能標記 needs more context。</label></li>
+        <li><label><input type="checkbox" data-item="能標記 resolve">能標記 resolve。</label></li>
+        <li><label><input type="checkbox" data-item="能標記 dismiss">能標記 dismiss。</label></li>
+        <li><label><input type="checkbox" data-item="resolve 必須填 reason">resolve 必須填 reason。</label></li>
+        <li><label><input type="checkbox" data-item="dismiss 必須填 reason">dismiss 必須填 reason。</label></li>
+      </ul>
+      <textarea data-note="Review Tray 測試" placeholder="實際結果 / 備註"></textarea>
+    </section>
+
+    <section class="qa-section" data-section="Audit Trace 測試">
+      <h2>7. Audit Trace 測試</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox" data-item="能看 lead inquiry -> draft/run -> feedback -> review decision -> applied refs -> next draft/run">能看 lead inquiry -&gt; draft/run -&gt; feedback -&gt; review decision -&gt; applied refs -&gt; next draft/run。</label></li>
+      </ul>
+      <textarea data-note="Audit Trace 測試" placeholder="實際結果 / 備註"></textarea>
+    </section>
+
+    <section class="qa-section" data-section="權限與安全測試">
+      <h2>8. 權限與安全測試</h2>
+      <ul class="checklist">
+        <li><label><input type="checkbox" data-item="未登入或無 session 應被擋">未登入或無 session 應被擋。</label></li>
+        <li><label><input type="checkbox" data-item="Staff 不應能操作 review tray">Staff 不應能操作 review tray。</label></li>
+        <li><label><input type="checkbox" data-item="不應看到 token">不應看到 token。</label></li>
+        <li><label><input type="checkbox" data-item="不應看到 stack trace">不應看到 stack trace。</label></li>
+        <li><label><input type="checkbox" data-item="不應看到 raw secret">不應看到 raw secret。</label></li>
+        <li><label><input type="checkbox" data-item="不應看到 production credential">不應看到 production credential。</label></li>
+      </ul>
+      <textarea data-note="權限與安全測試" placeholder="實際結果 / 備註"></textarea>
+    </section>
+
+    <section class="qa-section" data-section="回饋提交">
+      <h2>9. 回饋提交</h2>
+      <p>測完後，請按「複製測試摘要」，把摘要貼進 GitHub Issue Form。每個 failed checklist item 都要補預期結果、實際結果、截圖或錄影、嚴重度。不要貼 secret 或真實學生個資。</p>
+      <ul class="checklist">
+        <li><label><input type="checkbox" data-item="已整理 failed checklist item">已整理 failed checklist item。</label></li>
+        <li><label><input type="checkbox" data-item="已填預期結果">已填預期結果。</label></li>
+        <li><label><input type="checkbox" data-item="已填實際結果">已填實際結果。</label></li>
+        <li><label><input type="checkbox" data-item="已附截圖或補充說明">已附截圖或補充說明。</label></li>
+        <li><label><input type="checkbox" data-item="已標嚴重度">已標嚴重度。</label></li>
+      </ul>
+      <div class="fields single">
+        <label>整體嚴重度
+          <select data-field="severity">
+            <option value="">請選擇</option>
+            <option>Blocker</option>
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+            <option>Question</option>
+          </select>
+        </label>
+      </div>
+      <textarea data-note="回饋提交" placeholder="預期結果 / 實際結果 / 截圖連結 / 補充說明"></textarea>
+      <div class="actions compact">
+        <button class="button primary" type="button" data-copy-summary>複製測試摘要</button>
+        <a class="button secondary" href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" rel="noopener noreferrer">開啟 GitHub Issue Form</a>
+      </div>
+      <p class="copy-status" data-copy-status role="status" aria-live="polite"></p>
+      <textarea class="summary-output" data-summary-output readonly placeholder="如果瀏覽器不支援剪貼簿，摘要會顯示在這裡。"></textarea>
     </section>
   </main>
+
+  <script>
+    const STORAGE_KEY = "classgo-p0-preview-checklist-v1";
+    const form = document.querySelector("main");
+    const statusNodes = document.querySelectorAll("[data-copy-status]");
+    const output = document.querySelector("[data-summary-output]");
+
+    function readState() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function writeState(state) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function fieldKey(element) {
+      if (element.dataset.field) return "field:" + element.dataset.field;
+      if (element.dataset.note) return "note:" + element.dataset.note;
+      if (element.dataset.item) return "item:" + element.dataset.item;
+      return "";
+    }
+
+    function hydrate() {
+      const state = readState();
+      form.querySelectorAll("input, textarea, select").forEach((element) => {
+        const key = fieldKey(element);
+        if (!key || state[key] === undefined) return;
+        if (element.type === "checkbox") {
+          element.checked = state[key] === true;
+        } else {
+          element.value = state[key];
+        }
+      });
+      const date = form.querySelector('[data-field="date"]');
+      if (date && !date.value) date.valueAsDate = new Date();
+    }
+
+    function persist(event) {
+      const element = event.target;
+      const key = fieldKey(element);
+      if (!key) return;
+      const state = readState();
+      state[key] = element.type === "checkbox" ? element.checked : element.value;
+      writeState(state);
+    }
+
+    function collectSummary() {
+      const fields = {};
+      form.querySelectorAll("[data-field]").forEach((element) => {
+        fields[element.dataset.field] = element.value || "";
+      });
+
+      const sections = Array.from(document.querySelectorAll("[data-section]"));
+      const checked = [];
+      const failed = [];
+      const notes = [];
+
+      sections.forEach((section) => {
+        const title = section.dataset.section;
+        section.querySelectorAll('input[type="checkbox"][data-item]').forEach((box) => {
+          const line = title + " / " + box.dataset.item;
+          if (box.checked) checked.push(line);
+          else failed.push(line);
+        });
+        section.querySelectorAll("textarea[data-note]").forEach((note) => {
+          if (note.value.trim()) notes.push("[" + note.dataset.note + "] " + note.value.trim());
+        });
+      });
+
+      return [
+        "Classgo P0 Preview 人工驗測摘要",
+        "- Preview URL: https://kyc-pc.tail2b14a1.ts.net:10000",
+        "- Public checklist: https://kuan0710.github.io/classgo-p0-preview-feedback/",
+        "- Public Issue Form: https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml",
+        "- 測試者: " + (fields.tester || ""),
+        "- 角色 / 權限: " + (fields.role || ""),
+        "- 瀏覽器 / 裝置: " + (fields.device || ""),
+        "- 測試日期: " + (fields.date || ""),
+        "- 整體嚴重度: " + (fields.severity || ""),
+        "- 勾選進度: " + checked.length + " / " + (checked.length + failed.length),
+        "",
+        "未通過或未確認項目:",
+        failed.length ? failed.map((item) => "- [ ] " + item).join("\n") : "- 無",
+        "",
+        "備註:",
+        notes.length ? notes.map((item) => "- " + item).join("\n") : "- 無",
+        "",
+        "請補充:",
+        "- Expected:",
+        "- Actual:",
+        "- Screenshot / notes:",
+        "",
+        "安全聲明: 本摘要由瀏覽器本機產生，未自動送出；請勿貼上 secret、token、真實學生個資、付款資料或 production credential。"
+      ].join("\n");
+    }
+
+    async function copySummary() {
+      const text = collectSummary();
+      output.value = text;
+      try {
+        await navigator.clipboard.writeText(text);
+        statusNodes.forEach((node) => {
+          node.textContent = "已複製摘要。請貼到 GitHub Issue Form，不會自動送出。";
+        });
+      } catch {
+        output.focus();
+        output.select();
+        statusNodes.forEach((node) => {
+          node.textContent = "瀏覽器未允許剪貼簿，請從下方文字框手動複製摘要。";
+        });
+      }
+    }
+
+    hydrate();
+    form.addEventListener("change", persist);
+    form.addEventListener("input", persist);
+    document.querySelectorAll("[data-copy-summary]").forEach((button) => {
+      button.addEventListener("click", copySummary);
+    });
+  </script>
 </body>
 </html>

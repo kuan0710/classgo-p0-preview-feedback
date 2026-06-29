@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classgo AI Platform P0 Preview 測試入口</title>
+  <meta name="description" content="Classgo AI Platform P0 Preview 測試入口、測試範圍、安全提醒與 GitHub Issue Form 回饋提交。">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="eyebrow">P0 Preview</div>
+      <h1 id="page-title">Classgo AI Platform P0 Preview 測試入口</h1>
+      <p class="lead">這是 preview，不是 production。請只用來測試 P0 招生漏追 AI 大腦回饋閉環，不要輸入真實學生個資或任何 secret。</p>
+      <div class="actions" aria-label="主要操作">
+        <a class="button primary" href="https://kyc-pc.tail2b14a1.ts.net:10000" rel="noopener noreferrer">開啟 Preview</a>
+        <a class="button secondary" href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" rel="noopener noreferrer">提交回饋</a>
+      </div>
+      <p class="url-line">Preview URL: <a href="https://kyc-pc.tail2b14a1.ts.net:10000" rel="noopener noreferrer">https://kyc-pc.tail2b14a1.ts.net:10000</a></p>
+      <p class="url-line">回饋表單需要 GitHub login 才能提交。</p>
+    </section>
+
+    <section class="band warning" aria-labelledby="safety-title">
+      <h2 id="safety-title">安全提醒</h2>
+      <p>不要在 preview、GitHub issue、截圖或錄影中貼上真實學生個資、bearer token、cookie、database URL、service env 或 production credentials。</p>
+    </section>
+
+    <section class="grid two">
+      <article class="panel">
+        <h2>測試範圍</h2>
+        <ul>
+          <li>Enrollment workbench。</li>
+          <li>Lead detail。</li>
+          <li>Manual AI draft。</li>
+          <li>Feedback。</li>
+          <li>Review Tray。</li>
+          <li>Audit trace。</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <h2>不測範圍</h2>
+        <ul>
+          <li>True LLM quality。</li>
+          <li>Production auth。</li>
+          <li>ERP / MCP / external integration。</li>
+          <li>Auto-send。</li>
+          <li>Auto-publish。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="band" aria-labelledby="stub-title">
+      <h2 id="stub-title">Deterministic Stub Caveat</h2>
+      <p>目前 AI draft 是 deterministic stub。這次 preview 只驗證 feedback-loop mechanics，不驗證真實 LLM provider quality，也不代表 production AI answer quality ready。</p>
+    </section>
+
+    <section class="grid two">
+      <article class="panel">
+        <h2>怎麼提交回饋</h2>
+        <p>請用 GitHub Issue Form 回報每一個問題或觀察。請不要貼 secrets、credentials 或真實學生個資。</p>
+        <a class="text-link" href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" rel="noopener noreferrer">開啟 GitHub 回饋表單</a>
+      </article>
+
+      <article class="panel">
+        <h2>回饋欄位</h2>
+        <p>請提供測試者、角色、頁面 / URL、操作、預期結果、實際結果、嚴重度，以及必要的截圖或補充說明。</p>
+        <a class="text-link" href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues" rel="noopener noreferrer">查看已提交回饋</a>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

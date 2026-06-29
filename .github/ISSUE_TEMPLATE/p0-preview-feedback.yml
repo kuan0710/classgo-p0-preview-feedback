@@ -1,0 +1,127 @@
+name: P0 Preview Feedback
+description: 回報 Classgo AI Platform P0 preview 測試問題、觀察或產品疑問。
+title: "[P0 Preview] "
+labels:
+  - p0-preview-feedback
+  - triage-needed
+body:
+  - type: markdown
+    attributes:
+      value: |
+        這是 Classgo AI Platform P0 preview 測試回饋表。這個 preview 不是正式 production release。
+
+        目前 AI draft 是 deterministic stub；本次只驗證 feedback-loop mechanics，不驗證真實 LLM provider quality。
+
+        安全提醒：請不要貼 bearer token、cookie、database URL、service env、production credentials 或真實學生個資。
+
+        測試者需要 GitHub login 才能提交此表單。
+  - type: input
+    id: tester-name
+    attributes:
+      label: 測試者姓名
+      placeholder: 例如：王小明
+    validations:
+      required: true
+  - type: dropdown
+    id: tester-role
+    attributes:
+      label: 測試角色
+      options:
+        - Owner
+        - Manager
+        - Staff
+        - Seed customer
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: test-date
+    attributes:
+      label: 測試日期
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: input
+    id: page-url
+    attributes:
+      label: 頁面 / URL
+      description: 發生問題或提出建議的頁面。不要貼任何 token、cookie 或 secret。
+      placeholder: 例如：/workflows/enrollment-followup/leads/...
+    validations:
+      required: true
+  - type: dropdown
+    id: test-scope
+    attributes:
+      label: 測試範圍
+      multiple: true
+      options:
+        - Workbench
+        - Lead detail
+        - AI draft
+        - Feedback
+        - Review Tray
+        - Audit trace
+        - Permission
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: action
+    attributes:
+      label: 操作內容
+      description: 你點了什麼、輸入什麼或嘗試做什麼。
+      placeholder: 請描述操作步驟。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 預期結果
+      description: 你原本期待系統怎麼反應。
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 實際結果
+      description: 系統實際發生什麼。
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 嚴重度
+      options:
+        - Blocker
+        - High
+        - Medium
+        - Low
+        - Question
+    validations:
+      required: true
+  - type: dropdown
+    id: reproducible
+    attributes:
+      label: 是否可重現
+      options:
+        - Always
+        - Sometimes
+        - Once
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: screenshot
+    attributes:
+      label: 截圖或錄影連結
+      description: 可貼 Google Drive / Loom / 截圖連結。不要貼 secrets 或含個資的素材。
+      placeholder: https://...
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補充說明
+      description: 其他觀察、建議或產品疑問。
+    validations:
+      required: false

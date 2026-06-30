@@ -14,6 +14,8 @@ body:
 
         安全提醒：請不要貼 bearer token、cookie、database URL、service env、production credentials 或真實學生個資。
 
+        建議保留測試清單、preview 與本回饋表各自開在不同分頁，方便邊測邊填。
+
         測試者需要 GitHub login 才能提交此表單。
   - type: input
     id: tester-name

@@ -2,11 +2,13 @@
 
 這個 public repository 只用於 Classgo AI Platform P0 Preview 招生工作情境測試清單與外部回饋收集。
 
-Preview URL: <https://kyc-pc.tail2b14a1.ts.net:10000>
+Preview URL: <a href="https://kyc-pc.tail2b14a1.ts.net:10000" target="_blank" rel="noopener noreferrer">https://kyc-pc.tail2b14a1.ts.net:10000（另開新分頁）</a>
 
-GitHub Pages 測試入口 / 清單: <https://kuan0710.github.io/classgo-p0-preview-feedback/>
+GitHub Pages 測試入口 / 清單: <a href="https://kuan0710.github.io/classgo-p0-preview-feedback/" target="_blank" rel="noopener noreferrer">https://kuan0710.github.io/classgo-p0-preview-feedback/（另開新分頁）</a>
 
-唯一正式外部回饋入口: <https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml>
+唯一正式外部回饋入口: <a href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" target="_blank" rel="noopener noreferrer">GitHub Issue Form（另開新分頁）</a>
+
+Public feedback repo: <a href="https://github.com/kuan0710/classgo-p0-preview-feedback" target="_blank" rel="noopener noreferrer">https://github.com/kuan0710/classgo-p0-preview-feedback（另開新分頁）</a>
 
 ## 用途
 

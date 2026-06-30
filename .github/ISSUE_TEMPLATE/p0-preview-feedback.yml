@@ -16,7 +16,7 @@ body:
 
         建議保留測試清單、preview 與本回饋表各自開在不同分頁，方便邊測邊填。
 
-        測試者需要 GitHub login 才能提交此表單。
+        這份 GitHub Issue Form 需要 GitHub login。沒有 GitHub 帳號的測試者，請回到測試清單按「複製測試摘要」，再貼到我們指定的 LINE、Email 或測試群組。
   - type: input
     id: tester-name
     attributes:

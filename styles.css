@@ -143,6 +143,40 @@ p {
   color: var(--danger-text);
 }
 
+.feedback-options {
+  border-left: 4px solid var(--accent);
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.option-grid article {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcff;
+}
+
+.option-grid h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.option-grid ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.option-grid li {
+  margin: 6px 0;
+}
+
 .fields {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -277,6 +311,7 @@ textarea {
 
   .fields,
   .fields.single,
+  .option-grid,
   .test-map {
     grid-template-columns: 1fr;
   }

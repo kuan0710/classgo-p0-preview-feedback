@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Classgo AI Platform P0 Preview 招生工作情境測試清單</title>
-  <meta name="description" content="Classgo AI Platform P0 Preview 招生工作情境測試清單、測試資料安全規則與 GitHub Issue Form 回饋提交入口。">
+  <meta name="description" content="Classgo AI Platform P0 Preview 招生工作情境測試清單、測試資料安全規則與免 GitHub 帳號回饋方式。">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -16,10 +16,11 @@
       <div class="actions" aria-label="主要操作">
         <a class="button primary" href="https://kyc-pc.tail2b14a1.ts.net:10000" target="_blank" rel="noopener noreferrer" aria-label="開啟 Preview，另開新分頁">開啟 Preview（另開新分頁）</a>
         <button class="button secondary" type="button" data-copy-summary>複製測試摘要</button>
-        <a class="button secondary" href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" target="_blank" rel="noopener noreferrer" aria-label="提交 GitHub 回饋，另開新分頁">提交 GitHub 回饋（另開新分頁）</a>
+        <a class="button secondary" href="#feedback-submit">回報測試結果</a>
       </div>
       <p class="url-line">Preview URL: <a href="https://kyc-pc.tail2b14a1.ts.net:10000" target="_blank" rel="noopener noreferrer" aria-label="開啟 Preview URL，另開新分頁">https://kyc-pc.tail2b14a1.ts.net:10000（另開新分頁）</a></p>
-      <p class="url-line">正式外部回饋入口：<a href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" target="_blank" rel="noopener noreferrer" aria-label="開啟 Public GitHub Issue Form，另開新分頁">Public GitHub Issue Form（另開新分頁）</a></p>
+      <p class="url-line">沒有 GitHub 帳號也可以回報：按「複製測試摘要」，貼到我們指定的 LINE、Email 或測試群組即可。</p>
+      <p class="url-line">有 GitHub 帳號的內部同事可用：<a href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" target="_blank" rel="noopener noreferrer" aria-label="開啟 Public GitHub Issue Form，另開新分頁">Public GitHub Issue Form（另開新分頁）</a></p>
       <p class="url-line">Public feedback repo: <a href="https://github.com/kuan0710/classgo-p0-preview-feedback" target="_blank" rel="noopener noreferrer" aria-label="開啟 Public feedback repo，另開新分頁">https://github.com/kuan0710/classgo-p0-preview-feedback（另開新分頁）</a></p>
       <p class="url-line">本頁只用瀏覽器 localStorage 暫存勾選狀態與備註；不會自動送出、不會上傳資料、沒有後端。</p>
     </section>
@@ -27,6 +28,30 @@
     <section class="band warning" aria-labelledby="safety-title">
       <h2 id="safety-title">測試資料安全規則</h2>
       <p>不要在 preview、GitHub issue、截圖或錄影中輸入或貼上真實學生個資、密碼、token、cookie、資料庫連線資訊、服務設定、密鑰、正式環境憑證或付款資料。</p>
+    </section>
+
+    <section class="panel feedback-options" aria-labelledby="feedback-options-title">
+      <h2 id="feedback-options-title">怎麼回報測試結果</h2>
+      <p>一般測試者不需要 GitHub 帳號。請先勾選清單並填寫備註，最後按「複製測試摘要」。</p>
+      <div class="option-grid">
+        <article>
+          <h3>沒有 GitHub 帳號</h3>
+          <ol>
+            <li>按「複製測試摘要」。</li>
+            <li>把摘要貼到我們指定的 LINE、Email 或測試群組。</li>
+            <li>如果有截圖或錄影，請一起附上；記得遮蔽個資與密鑰。</li>
+          </ol>
+        </article>
+        <article>
+          <h3>有 GitHub 帳號</h3>
+          <ol>
+            <li>按「複製測試摘要」。</li>
+            <li>開啟 GitHub Issue Form。</li>
+            <li>把摘要貼進表單，再補上預期結果、實際結果與截圖。</li>
+          </ol>
+          <p><a href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" target="_blank" rel="noopener noreferrer" aria-label="開啟 GitHub Issue Form，另開新分頁">開啟 GitHub Issue Form（另開新分頁）</a></p>
+        </article>
+      </div>
     </section>
 
     <section class="panel" aria-labelledby="map-title">
@@ -98,7 +123,7 @@
         <li><label><input type="checkbox" data-item="我不會輸入真實學生個資、密碼、token、付款資料">我不會輸入真實學生個資、密碼、token、付款資料。</label></li>
         <li><label><input type="checkbox" data-item="我知道這次主要測招生追蹤流程，不是測正式 AI 回答品質">我知道這次主要測招生追蹤流程，不是測正式 AI 回答品質。</label></li>
         <li><label><input type="checkbox" data-item="我知道目前 AI 建議回覆草稿是 deterministic stub，不代表正式 LLM 回答品質">我知道目前 AI 建議回覆草稿是 deterministic stub，主要用來測流程，不代表正式 LLM 回答品質。</label></li>
-        <li><label><input type="checkbox" data-item="我知道遇到問題要用 GitHub Issue Form 回報">我知道遇到問題要用 GitHub Issue Form 回報。</label></li>
+        <li><label><input type="checkbox" data-item="我知道沒有 GitHub 帳號也可以複製摘要後回報">我知道沒有 GitHub 帳號也可以複製摘要後，貼到 LINE / Email / 測試群組回報。</label></li>
       </ul>
       <textarea data-note="測試前確認" placeholder="實際結果 / 備註"></textarea>
     </section>
@@ -182,9 +207,9 @@
       <textarea data-note="整體感受" placeholder="實際結果 / 備註"></textarea>
     </section>
 
-    <section class="qa-section" data-section="回饋提交">
+    <section class="qa-section" data-section="回饋提交" id="feedback-submit">
       <h2>回饋提交</h2>
-      <p>測完後，請按「複製測試摘要」，把摘要貼進 GitHub Issue Form。每個還沒確認或不符合現場期待的項目，都請補上預期結果、實際結果、截圖或錄影、嚴重度。不要貼 secret 或真實學生個資。</p>
+      <p>測完後，請按「複製測試摘要」。沒有 GitHub 帳號的測試者，直接把摘要貼到我們指定的 LINE、Email 或測試群組。有 GitHub 帳號的內部同事，也可以把摘要貼進 GitHub Issue Form。每個還沒確認或不符合現場期待的項目，都請補上預期結果、實際結果、截圖或錄影、嚴重度。不要貼 secret 或真實學生個資。</p>
       <div class="fields single">
         <label>整體嚴重度
           <select data-field="severity">
@@ -200,7 +225,7 @@
       <textarea data-note="回饋提交" placeholder="預期結果 / 實際結果 / 截圖連結 / 補充說明"></textarea>
       <div class="actions compact">
         <button class="button primary" type="button" data-copy-summary>複製測試摘要</button>
-        <a class="button secondary" href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" target="_blank" rel="noopener noreferrer" aria-label="開啟 GitHub Issue Form，另開新分頁">開啟 GitHub Issue Form（另開新分頁）</a>
+        <a class="button secondary" href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" target="_blank" rel="noopener noreferrer" aria-label="有 GitHub 帳號時開啟 Issue Form，另開新分頁">有 GitHub 帳號才開 Issue Form（另開新分頁）</a>
       </div>
       <p class="copy-status" data-copy-status role="status" aria-live="polite"></p>
       <textarea class="summary-output" data-summary-output readonly placeholder="如果瀏覽器不支援剪貼簿，摘要會顯示在這裡。"></textarea>
@@ -283,6 +308,7 @@
         "Classgo P0 Preview 招生工作情境測試摘要",
         "- Preview 網址: https://kyc-pc.tail2b14a1.ts.net:10000",
         "- 測試清單: https://kuan0710.github.io/classgo-p0-preview-feedback/",
+        "- 回報方式: 沒有 GitHub 帳號請貼到指定 LINE / Email / 測試群組；有 GitHub 帳號可用 Issue Form",
         "- GitHub Issue Form: https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml",
         "- 測試者: " + (fields.tester || ""),
         "- 角色 / 權限: " + (fields.role || ""),
@@ -312,7 +338,7 @@
       try {
         await navigator.clipboard.writeText(text);
         statusNodes.forEach((node) => {
-          node.textContent = "已複製摘要。請貼到 GitHub Issue Form，不會自動送出。";
+          node.textContent = "已複製摘要。沒有 GitHub 帳號請貼到 LINE / Email / 測試群組；有 GitHub 帳號可貼到 Issue Form。不會自動送出。";
         });
       } catch {
         output.focus();

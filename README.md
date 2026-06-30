@@ -6,14 +6,15 @@ Preview URL: <a href="https://kyc-pc.tail2b14a1.ts.net:10000" target="_blank" re
 
 GitHub Pages 測試入口 / 清單: <a href="https://kuan0710.github.io/classgo-p0-preview-feedback/" target="_blank" rel="noopener noreferrer">https://kuan0710.github.io/classgo-p0-preview-feedback/（另開新分頁）</a>
 
-唯一正式外部回饋入口: <a href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" target="_blank" rel="noopener noreferrer">GitHub Issue Form（另開新分頁）</a>
+有 GitHub 帳號的內部同事可用: <a href="https://github.com/kuan0710/classgo-p0-preview-feedback/issues/new?template=p0-preview-feedback.yml" target="_blank" rel="noopener noreferrer">GitHub Issue Form（另開新分頁）</a>
 
 Public feedback repo: <a href="https://github.com/kuan0710/classgo-p0-preview-feedback" target="_blank" rel="noopener noreferrer">https://github.com/kuan0710/classgo-p0-preview-feedback（另開新分頁）</a>
 
 ## 用途
 
 - GitHub Pages 對外測試入口、畫面測試地圖與招生工作情境測試清單。
-- GitHub Issue Form 是唯一正式外部回饋入口。
+- 一般測試者不需要 GitHub 帳號；可複製測試摘要後貼到指定 LINE、Email 或測試群組。
+- GitHub Issue Form 保留給有 GitHub 帳號的內部同事或協作者使用。
 - 提醒測試者 preview 安全邊界與測試範圍。
 - 用瀏覽器 localStorage 暫存勾選狀態與備註；沒有後端，不自動送出，不上傳資料。
 
@@ -47,7 +48,22 @@ Public feedback repo: <a href="https://github.com/kuan0710/classgo-p0-preview-fe
 - 不輸入真實學生個資、密碼、token、cookie、付款資料或正式環境憑證。
 - 不把 bearer token、資料庫連線資訊、服務設定、密鑰或技術錯誤細節貼進 issue。
 - 截圖或錄影前先遮蔽任何疑似個資、密鑰、憑證或內部環境資訊。
-- 回饋只提交到 public Issue Form；不要把外部測試者導向 private product repo。
+- 不要把外部測試者導向 private product repo。
+
+## 怎麼回報
+
+### 沒有 GitHub 帳號
+
+1. 在測試清單勾選項目並填寫備註。
+2. 按「複製測試摘要」。
+3. 把摘要貼到我們指定的 LINE、Email 或測試群組。
+4. 如果有截圖或錄影，請一併附上；貼出前先遮蔽個資、密鑰或正式環境資訊。
+
+### 有 GitHub 帳號
+
+1. 在測試清單勾選項目並填寫備註。
+2. 按「複製測試摘要」。
+3. 開啟 GitHub Issue Form，貼上摘要並補上預期結果、實際結果、截圖或錄影。
 
 ## 安全提醒
 
@@ -60,7 +76,7 @@ Public feedback repo: <a href="https://github.com/kuan0710/classgo-p0-preview-fe
 - Service env。
 - 正式環境憑證。
 
-測試者需要 GitHub login 才能提交 Issue Form。Issue Form 不會由 checklist 自動送出；測試者需要手動貼上摘要與補充資料。
+GitHub Issue Form 需要 GitHub login。沒有 GitHub 帳號的測試者請使用「複製測試摘要」後貼到 LINE、Email 或測試群組的方式回報。Checklist 不會自動送出任何資料；測試者需要手動貼上摘要與補充資料。
 
 ## 授權
 

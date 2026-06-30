@@ -10,7 +10,7 @@ body:
       value: |
         這是 Classgo AI Platform P0 preview 測試回饋表。這個 preview 不是正式 production release。
 
-        目前 AI draft 是 deterministic stub；本次只驗證 feedback-loop mechanics，不驗證真實 LLM provider quality。
+        目前 AI 建議回覆草稿是 deterministic stub；本次主要驗證招生追蹤與回饋審核流程，不驗證真實 LLM 回答品質。
 
         安全提醒：請不要貼 bearer token、cookie、database URL、service env、production credentials 或真實學生個資。
 
@@ -29,11 +29,10 @@ body:
     attributes:
       label: 測試角色
       options:
-        - Owner
-        - Manager
-        - Staff
-        - Seed customer
-        - Other
+        - 主任 / 負責人
+        - 招生老師 / 櫃台
+        - 種子客戶
+        - 其他
     validations:
       required: true
   - type: input
@@ -57,14 +56,13 @@ body:
       label: 測試範圍
       multiple: true
       options:
-        - Workbench
-        - Lead detail
-        - AI draft
-        - Feedback
-        - Review Tray
-        - Audit trace
-        - Permission
-        - Other
+        - 招生漏追工作台
+        - 家長詢問詳情
+        - AI 建議回覆草稿
+        - AI 回饋與審核
+        - AI 回答追蹤
+        - 權限與安全
+        - 其他
     validations:
       required: true
   - type: textarea
@@ -94,11 +92,11 @@ body:
     attributes:
       label: 嚴重度
       options:
-        - Blocker
-        - High
-        - Medium
-        - Low
-        - Question
+        - 無法繼續測
+        - 影響主要流程
+        - 可以測但很卡
+        - 小問題
+        - 問題或建議
     validations:
       required: true
   - type: dropdown
@@ -106,10 +104,10 @@ body:
     attributes:
       label: 是否可重現
       options:
-        - Always
-        - Sometimes
-        - Once
-        - Not sure
+        - 每次都會
+        - 有時會
+        - 只遇到一次
+        - 不確定
     validations:
       required: true
   - type: input

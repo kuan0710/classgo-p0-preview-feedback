@@ -12,7 +12,7 @@ Public feedback repo: <a href="https://github.com/kuan0710/classgo-p0-preview-fe
 
 ## 用途
 
-- GitHub Pages 對外測試入口與招生工作情境測試清單。
+- GitHub Pages 對外測試入口、畫面測試地圖與招生工作情境測試清單。
 - GitHub Issue Form 是唯一正式外部回饋入口。
 - 提醒測試者 preview 安全邊界與測試範圍。
 - 用瀏覽器 localStorage 暫存勾選狀態與備註；沒有後端，不自動送出，不上傳資料。
@@ -30,6 +30,17 @@ Public feedback repo: <a href="https://github.com/kuan0710/classgo-p0-preview-fe
 這是 P0 Preview，不是正式上線。
 
 目前 AI 建議回覆草稿是 deterministic stub。這次主要測招生追蹤流程、AI 回饋審核、權限邊界與 AI 回答追蹤，不代表正式 LLM 回答品質。
+
+## 怎麼測
+
+請從 GitHub Pages 的「怎麼對照畫面測試」開始。每個主要測試區塊都寫明：
+
+- 入口頁面。
+- 要點哪筆範例資料。
+- 要看哪個 UI 區塊。
+- 通過標準。
+
+主要範例資料包含「小明英文試聽詢問」、「國中數學試聽後追蹤」與「缺少暑期班費用來源」回饋卡片。
 
 ## 測試資料安全規則
 

@@ -3,3 +3,4 @@ build.local.mjs
 codes.local.json
 .staticrypt.json
 node_modules/
+.unit-*.html

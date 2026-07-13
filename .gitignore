@@ -4,3 +4,6 @@ codes.local.json
 .staticrypt.json
 node_modules/
 .unit-*.html
+invites.local.md
+classgo-notify.sh
+p0-preview-reachability.sh
